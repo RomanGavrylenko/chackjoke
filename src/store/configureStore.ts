@@ -8,7 +8,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   rootReducer,
-  load(),
+  load({ states: ['jokes.jokesList'] }),
   composeWithDevTools(applyMiddleware(
     sagaMiddleware,
     save({

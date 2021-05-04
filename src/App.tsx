@@ -5,7 +5,7 @@ import { JokeItem } from 'components/JokeItem';
 import { Button } from 'components/Button';
 
 function App() {
-  const { jokesList, getData, isLoading } = useJokeList(true);
+  const { jokesList, getData, isLoading } = useJokeList();
 
   return (
     <div className='app'>

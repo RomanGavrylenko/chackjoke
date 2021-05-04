@@ -1,0 +1,10 @@
+.joke-item {
+  flex: 0 0 240px;
+  padding: var(--main-padding);
+  margin: var(--margin);
+  font-family: var(--font);
+  line-height: 1.25rem;
+  font-size: var(--fz); 
+  border-radius: var(--border-radius);
+  border: 1px solid black;
+}

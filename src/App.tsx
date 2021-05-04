@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useJokeList } from 'hooks/useJokeList';
+import { JokeItem } from 'components/JokeItem';
+import { Button } from 'components/Button';
 
 function App() {
+  const { jokesList, getData, isLoading } = useJokeList(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <ul className='app__jokes-list'>
+        <li >
+          <Button onClick={getData} disabled={isLoading}>
+            more!!!!!
+          </Button>
+        </li>
+        {jokesList.map(item => <JokeItem {...item} key={item.id} />)}
+      </ul>
     </div>
   );
 }

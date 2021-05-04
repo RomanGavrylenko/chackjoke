@@ -1,0 +1,20 @@
+.button {
+  width: var(--width);
+  padding: var(--main-padding);
+  margin: var(--margin);
+  background: aqua;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: 0.3s;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
